@@ -121,8 +121,8 @@ const WORK = [
     tag: "AI that learns your style",
     title: "MIDI Agent",
     body: "Answers a musician's MIDI phrase with editable, in-key MIDI inside their DAW. The same promise Imagen makes photographers: automate the tedium, keep the personal style.",
-    href: "https://github.com/barmoshe/midi-agent",
-    cta: "GitHub",
+    href: "https://barmoshe.github.io/midi-agent/",
+    cta: "Preview",
   },
   {
     tag: "Shipped on npm",
