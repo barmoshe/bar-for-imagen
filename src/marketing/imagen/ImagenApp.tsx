@@ -48,7 +48,7 @@ const STACK_WORDS = [
   "Docker",
 ];
 
-// "One engineer, fully equipped." tabs, mirroring Imagen's six feature tabs.
+// Six tabs, mirroring Imagen's six feature tabs.
 const TABS = [
   {
     id: "frontend",
@@ -63,7 +63,7 @@ const TABS = [
   {
     id: "ai",
     label: "AI & agents",
-    body: "LLM apps, MCP servers, agent harnesses and evals. I ship AI products and I use AI tooling to build faster, with quality gates instead of vibes.",
+    body: "LLM apps, MCP servers, agent harnesses and evals. I ship AI products and use AI tooling to build faster, with quality gates, not guesswork.",
   },
   {
     id: "desktop",
@@ -82,27 +82,27 @@ const TABS = [
   },
 ];
 
-// Tint cards mapped to the job description, in Imagen's possessive-parallel voice.
+// Tint cards mapped to the job description, plain CV-register statements.
 const FIT_CARDS = [
   {
     tone: "blush",
-    title: "Your TypeScript, matched.",
-    body: "Strong TypeScript is your must-have. It's my first choice across web, desktop and tooling, with the HTML and CSS craft underneath it.",
+    title: "TypeScript, my primary language.",
+    body: "TypeScript is my first choice across web, desktop and tooling, with the HTML and CSS craft underneath it.",
   },
   {
     tone: "ice",
-    title: "Your desktop app, familiar.",
-    body: "Electron is your advantage line. I've shipped with it in client work, so the ramp to your desktop surface is short.",
+    title: "Electron experience.",
+    body: "I've shipped with Electron in client work: main and renderer processes, IPC, packaging. The ramp to a desktop app built on it is short.",
   },
   {
     tone: "lime",
-    title: "Your pipeline, understood.",
+    title: "Video pipeline experience.",
     body: "I built a video-rendering pipeline that runs in production for a client, and I ship an open-source version of the same idea, Catalogue Orchestrator, on my own time. Batch media processing at volume is not an abstraction to me.",
   },
   {
     tone: "gray",
-    title: "Your users, respected.",
-    body: "I've supported creative professionals on a cloud video editor at Wochit since 2021. Speed and trust is what software owes people on a deadline.",
+    title: "Support experience with creative professionals.",
+    body: "I've supported creative professionals on a cloud video editor at Wochit since 2021. Speed and reliability matter most to people working under a deadline.",
   },
 ];
 
@@ -161,7 +161,7 @@ const WORK = [
   },
 ];
 
-// "You're probably wondering..." accordion, mirroring Imagen's FAQ. Honest.
+// FAQ accordion, mirroring Imagen's layout, plain CV-register answers.
 const FAQ = [
   {
     q: "Has he actually used Electron?",
@@ -169,7 +169,7 @@ const FAQ = [
   },
   {
     q: "Why Imagen?",
-    a: "I build creative tools on my own time, instruments and MIDI agents, so \"automate the tedious part, protect the personal style\" is a product idea I already believe in. And supporting a cloud video editor at Wochit taught me who this software serves: professionals mid-deadline.",
+    a: "I build creative tools on my own time, instruments and MIDI agents, so I already work on automating a tedious task while protecting someone's personal style. Supporting a cloud video editor at Wochit taught me who this kind of software serves: professionals working under a deadline.",
   },
   {
     q: "Does he fit the experience band?",
@@ -177,7 +177,7 @@ const FAQ = [
   },
   {
     q: "Can he start something real in week one?",
-    a: "This page is the answer. Posting to deployed site, in your brand, with a matching CV, inside a day. That's my normal pace, and it comes with lint gates and accessibility checks, not instead of them.",
+    a: "This page: from the job posting to a deployed site, in Imagen's brand, with a matching CV, inside a day. That's my normal pace, with lint gates and accessibility checks included, not skipped.",
   },
 ];
 
@@ -322,9 +322,9 @@ export function ImagenApp() {
               <span className="imagen-star" aria-hidden="true">
                 ★
               </span>
-              Proof over claims: the demos below are live
+              The projects below are live and public
             </p>
-            <h1>A full-stack engineer, powered by builder&nbsp;DNA.</h1>
+            <h1>Full-stack engineer, TypeScript and React.</h1>
             <div className="imagen-compat">
               <span className="imagen-compat-label">Compatible with</span>
               <span className="imagen-chip">TS</span>
@@ -334,9 +334,8 @@ export function ImagenApp() {
             </div>
             <p className="imagen-sub">
               I&apos;m Bar Moshe. I build product features end to end in
-              TypeScript, web and desktop, and I&apos;d like to build
-              Imagen&apos;s next ones.{" "}
-              <strong>Try me with one interview.</strong>
+              TypeScript, across web and desktop, and I&apos;m applying for
+              Imagen&apos;s Full Stack Engineer role.
             </p>
             <div className="imagen-cta-row imagen-cta-center">
               <a className="imagen-btn imagen-btn-lg" href="#work">
@@ -346,7 +345,6 @@ export function ImagenApp() {
                 Download CV
               </a>
             </div>
-            <p className="imagen-micro">No cover letter needed.</p>
             <div className="imagen-centerpiece">
               <Centerpiece />
             </div>
@@ -356,7 +354,7 @@ export function ImagenApp() {
         {/* --- shipped marquee (their photographer-name marquee) --- */}
         <section className="imagen-marquee-strip">
           <p className="imagen-eyebrow imagen-eyebrow-center">
-            Shipped by one engineer
+            Shipped work
           </p>
           <Marquee items={SHIPPED} label="Shipped work" />
         </section>
@@ -371,10 +369,10 @@ export function ImagenApp() {
             Full-stack range
           </p>
           <h2 className="imagen-h2 imagen-h2-center" id="range-h">
-            One engineer, fully equipped.
+            Where I work in the stack.
           </h2>
           <p className="imagen-section-sub">
-            Six surfaces I work on, in the stack Imagen ships on.
+            Six parts of the stack I work in, mapped to Imagen&apos;s stack.
           </p>
           <Tabs />
         </section>
@@ -389,7 +387,7 @@ export function ImagenApp() {
             Mapped to your posting
           </p>
           <h2 className="imagen-h2 imagen-h2-center" id="fit-h">
-            Built around the seat.
+            How I match the role.
           </h2>
           <div className="imagen-fit-grid">
             {FIT_CARDS.map((c) => (
@@ -407,7 +405,7 @@ export function ImagenApp() {
         {/* --- dark stack band (their "YOUR STORY. YOUR GENRE." marquee) --- */}
         <section className="imagen-dark" aria-labelledby="stack-h">
           <p className="imagen-eyebrow imagen-eyebrow-dark" id="stack-h">
-            Your stack. My daily work.
+            The stack I use daily.
           </p>
           <Marquee items={STACK_WORDS} label="Working stack" big />
         </section>
@@ -420,13 +418,13 @@ export function ImagenApp() {
           id="work"
         >
           <p className="imagen-eyebrow imagen-eyebrow-center">
-            Chosen by real users
+            Selected work
           </p>
           <h2 className="imagen-h2 imagen-h2-center" id="work-h">
             The work, live.
           </h2>
           <p className="imagen-section-sub">
-            The two that rhyme with your product come first.
+            Public, live projects. Closest to this role first.
           </p>
           <div className="imagen-work-grid">
             {WORK.map((w) => (
@@ -454,7 +452,7 @@ export function ImagenApp() {
           aria-labelledby="faq-h"
         >
           <h2 className="imagen-h2 imagen-h2-center" id="faq-h">
-            You&apos;re probably wondering...
+            Questions you might have.
           </h2>
           <div className="imagen-faq">
             {FAQ.map((f) => (
@@ -473,12 +471,12 @@ export function ImagenApp() {
         <section className="imagen-close" data-reveal aria-labelledby="close-h">
           <div className="imagen-wrap">
             <h2 className="imagen-h2 imagen-close-h" id="close-h">
-              Built for the work I care about.
+              Let&apos;s talk.
             </h2>
             <p className="imagen-close-sub">
-              Imagen automates the tedious part so photographers can be present
-              for the part they love. That&apos;s the kind of product I want to
-              build. Tel Aviv based, hybrid ready.
+              I like what Imagen builds: automating tedious editing work so
+              photographers can focus on the part they love. Tel Aviv based,
+              hybrid ready.
             </p>
             <div className="imagen-cta-row imagen-cta-center">
               <a className="imagen-btn imagen-btn-lg" href={waHref}>
@@ -492,7 +490,7 @@ export function ImagenApp() {
               </a>
             </div>
             <p className="imagen-micro">
-              Replies fast. GitHub:{" "}
+              GitHub:{" "}
               <a href={GITHUB} className="imagen-inline-link">
                 barmoshe
               </a>
