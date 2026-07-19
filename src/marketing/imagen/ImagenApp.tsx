@@ -21,6 +21,7 @@ const GITHUB = "https://github.com/barmoshe";
 
 // Marquee of shipped things, mirroring Imagen's photographer-name marquee.
 const SHIPPED = [
+  "Catalogue Orchestrator",
   "MDP",
   "Temporal Code Exchange",
   "MIDI Agent",
@@ -96,7 +97,7 @@ const FIT_CARDS = [
   {
     tone: "lime",
     title: "Your pipeline, understood.",
-    body: "I built a video-rendering pipeline that runs in production for a client. Batch media processing at volume is not an abstraction to me.",
+    body: "I built a video-rendering pipeline that runs in production for a client, and I ship an open-source version of the same idea, Catalogue Orchestrator, on my own time. Batch media processing at volume is not an abstraction to me.",
   },
   {
     tone: "gray",
@@ -105,22 +106,23 @@ const FIT_CARDS = [
   },
 ];
 
-// Work grid: live, public, clickable. The two that rhyme with Imagen's product
+// Work grid: live, public, clickable, AI/systems first then craft demos. The
+// two that rhyme with Imagen's product (video pipeline, style-learning agent)
 // lead. Joomsy stays a named credential in copy, never a linked card.
 const WORK = [
+  {
+    tag: "AI video pipeline",
+    title: "Catalogue Orchestrator",
+    body: "Point it at a catalogue of footage plus an intent: it indexes clips with RAG, an AI agent plans the edit, and a deterministic ffmpeg compiler renders the cut. The AI only ever outputs an edit list, never raw ffmpeg, so results stay reproducible.",
+    href: "https://barmoshe.github.io/catalogue-orchestrator/",
+    cta: "Presentation",
+  },
   {
     tag: "AI that learns your style",
     title: "MIDI Agent",
     body: "Answers a musician's MIDI phrase with editable, in-key MIDI inside their DAW. The same promise Imagen makes photographers: automate the tedium, keep the personal style.",
     href: "https://github.com/barmoshe/midi-agent",
     cta: "GitHub",
-  },
-  {
-    tag: "Creative tools",
-    title: "Biome Synth",
-    body: "A browser instrument with an AI DJ across five living biomes. Tone.js, Three.js and Canvas2D, playable right now.",
-    href: "https://biome-synth.lovable.app/",
-    cta: "Play it",
   },
   {
     tag: "Shipped on npm",
@@ -130,18 +132,25 @@ const WORK = [
     cta: "Docs",
   },
   {
-    tag: "On-device vision",
-    title: "Bloom Garden",
-    body: "Webcam hand-tracking game: pinch to pluck flowers. MediaPipe runs fully in the browser, no video ever leaves the device.",
-    href: "https://bloom-garden-five.vercel.app",
-    cta: "Play it",
-  },
-  {
     tag: "Distributed",
     title: "Temporal pipeline",
     body: "One Temporal workflow orchestrating Go, Python and TypeScript workers, with retries and validation. Featured on Temporal's Code Exchange.",
     href: "https://temporal.io/code-exchange/cross-language-data-processing-service-with-temporal",
     cta: "Code Exchange",
+  },
+  {
+    tag: "Creative tools",
+    title: "Biome Synth",
+    body: "A browser instrument with an AI DJ across five living biomes. Tone.js, Three.js and Canvas2D, playable right now.",
+    href: "https://biome-synth.lovable.app/",
+    cta: "Play it",
+  },
+  {
+    tag: "On-device vision",
+    title: "Bloom Garden",
+    body: "Webcam hand-tracking game: pinch to pluck flowers. MediaPipe runs fully in the browser, no video ever leaves the device.",
+    href: "https://bloom-garden-five.vercel.app",
+    cta: "Play it",
   },
   {
     tag: "Full-stack",
