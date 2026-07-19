@@ -1,0 +1,98 @@
+/* =========================================================================
+   marketing-base.css, structural reset + a11y floor + scroll-reveal mechanics
+   for a bar-for-* application site.
+
+   Brand-agnostic ON PURPOSE. All colour / type / shape lives in imagen.css as
+   tokens. Do NOT add brand values here, this file is meant to survive verbatim
+   across every bar-for-* site so the "keep in sync" surface stays small.
+   ========================================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Visible keyboard focus everywhere (WCAG 2.2). */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 3px solid var(--imagen-accent, currentColor);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip link, first focusable element, hidden until focused. */
+.imagen-skip {
+  position: absolute;
+  left: 8px;
+  top: -120px;
+  z-index: 100;
+  padding: 10px 14px;
+  background: var(--imagen-ink);
+  color: var(--imagen-bg);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.imagen-skip:focus {
+  top: 8px;
+}
+
+/* Scroll reveal, attribute pair, not a class (ADR 0187). Hidden until
+   `data-in` is stamped by useReveal(); reduced motion stamps it immediately. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  will-change: opacity, transform;
+}
+[data-reveal][data-in] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
